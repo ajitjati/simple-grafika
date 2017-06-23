@@ -20,17 +20,13 @@ by reading that.
 
 But we have built a simplest version of demo which solves few major problems :
 ## About this sample-grafika
-Attempts to record at 720p from the default camera, displaying the preview and recording it simultaneously.
+Attempts to record at 720p from the default camera, displaying the preview and recording it simultaneously.(CameraCaptureActivity.java)
 - Recording continues until stopped.  If you back out and return, recording will start again,
   with a real-time gap.  If you try to play the movie while it's recording, you will see
   an incomplete file (and probably cause the play movie activity to crash).
-- You can select a filter to apply to the preview.  It does not get applied to the recording.
-  The shader used for the filters is not optimized, but seems to perform well on most devices
-  (the original Nexus 7 (2012) being a notable exception).  Demo
-  here: http://www.youtube.com/watch?v=kH9kCP2T5Gg
 - The output is stored at home directory of your SD card ("grafika-2372377731.mp4").
 - It can optimise your media/video on-the-fly from camera while recording
-- You can change video key-frames, bitrates,framerates,size and encodings
+- You can change video key-frames, bitrates,framerates,size and encodings(VideoEncoderCore.java)
 - The best part is everything will happen on the fly so when your recording stops, the video should be already prepared :)
 - You don't need FFMPEG or other heavy libraries to perform all the above tasks
 - All code is written in the Java programming language -- the NDK is not used.
